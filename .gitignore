@@ -1,0 +1,6 @@
+.history
+env
+static/images
+__pycache__
+*.pt
+.DS_Store
