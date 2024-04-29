@@ -11,6 +11,10 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
             
 clients = set()
 
+@app.get("/")
+async def root():
+    return {"message": "Welcome to Cats and Dogs API!"}
+
 @app.websocket("/ws/images")
 async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
